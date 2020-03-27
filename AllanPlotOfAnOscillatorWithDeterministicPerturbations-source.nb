@@ -1,0 +1,862 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 8.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[     31201,        852]
+NotebookOptionsPosition[     29400,        787]
+NotebookOutlinePosition[     30084,        813]
+CellTagsIndexPosition[     30041,        810]
+WindowTitle->Allan Plot of an Oscillator with Deterministic Perturbations - \
+Source
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Allan Plot of an Oscillator with Deterministic Perturbations", "Section",
+ CellFrame->{{0, 0}, {0, 0}},
+ ShowCellBracket->False,
+ FontColor->RGBColor[0.597406, 0, 0.0527047]],
+
+Cell[BoxData[
+ GraphicsBox[RasterBox[CompressedData["
+1:eJztnVuSozgWQDNiPqa3MJ+zpVlCbaB3WlGVNV9dvYH6TQRUph/ZGIHQmwvG
+xoZzQu3Aku7VfUj4Nk53//fLn//78q+Xl5f/NP/88e+Xl8v154Xj5+fp89y0
+4+X63L7VnQu02XqOt9FzjRK5qtRMoYZFpk11/Ji+WDye92+r7+fFfbnGkuu9
+eIQ4LBVJ+YRo5DPnRdITDp0TLRg6m/62nY/n08f5+H461G37fWqum57z4Xy2
+jby0prMZOh4/jodLOx2bt6fzRSEA3B/KMKGSBy/DSKVcyYOn8krHqajvqed6
+G6iol4qkfAIVNQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADsizPA/lj72AEA
+AMCmWLu0AXh01j6jAAAAcdb+hNwUJ5e1zZnPDEeey/e1jx0AAABsirVLm03x
+XFVlhs1X1JNY+4wCAAB02B9PJ4BdsvYpBAAAgOeGihpADo9GAUDIr+Lnr7ef
+a9vw16/i73VtMPx6+2v1gGwMijeAE89FAQA2DRW1BxX14lBRA0wi+lx0baMA
+AAAAAAAAAAAAbkj0uegR4L4cDoe1TYA1YQMAbIaDy9rm3JU9+w4AjwB3np3D
+BgDYDHuuKu/su3k0ynNRACGLHMy93dm2ijCPpHvD7LliAQAAmA0VNRioqIGK
+GlYk9Vz0AAAAAAAAAAAAALBR9KPR8Kf0a9sFAAAAAAAAAAAAcCt4LgoAAAAA
+AAAAAAB7I/Vc9ONheH9/X9uEzUJsZ0PoAGBZ3gNuLQgggR21GUjl7SC2syF0
+ALAsVNQgxMv14XAI/xOja9sIAAAAT0lYWM5jbT/msGffAQAAAGAp9lxV3sF3
+b1r0uehSZgAAAAAAAAAAAAA8Ar9b6rpuXpu3+tf0PBcFWJcFvxYBAAAAANgh
+VNQAADCK5LnobwAAAAAAAAAAAIANUbcPRav+wehH7LmoUqpsqKqmNTSXRVE0
+by593mtRXlrfo7mImTlVN6ebUOhR07q3jmxVWXqquqxVOUjZq1eDVNe662ro
+Nxe1Xr5o2lt5cUc7VWr3BpGindNL6TkDl5nVIGWtbuaXWbwJo/OVKjSX68oL
+shMTO4ylHf+yy5GbhU5EubJJPeWgx5ayBfvOIR2qD5QJXWmFtJs2pLsLvu40
+4oOesh/tJ3TKW/3DomZONgVdVPtNXvVXYWydyBRl/NWNWNW62L06G344TcNW
+L/SVpaTqcmeOWGWOm3W+TFPWsbL8dE1yklUal73ghDtBH+Hu1dE/HBM7/t7h
+sjNoN29Calrl2GadWfsMeoc0elcR584clrm5qzO5a+5mQe4imy2Tu1qcu+g2
+7od7mkvVtqJtajgInQuqzUrRtWFCzIAkzQdK0/RR1U33JEhtgOhosnmLKtX0
+DArVhaJHtZOlmgPbVN+mWZhRGzNvEc13MD61kIRcEPS2WciRp/C97a0ow569
+DCOVRurZU0lFnUoBFbWkKiv7I0xFLc4dFXUAFfVUtVTUYRD2V1EnfTd7u920
+v+va/NXoSXM86qXVwFtzgNvS7vJG3730Ga76Wkq/6lFz3dlWOa+69XpUOSix
+ixQtrrVV1pxBleO+uesMsv6QjenXF+bViFjGO5rtObaUp7bVoENe21Kqy1Un
+1M8xOaxNftysOh61q5joKStQpbkIQ2p54HRWXcqsOsbVU7oZNBr8Fbv+yotk
+GBkvbuFbu9/LkY6DF3ZvTvqtOVXdBi0dlN6WZekEsHfQ2flmjpnQ+25vfn//
+2yH1eswnokp/tNkpsJNrTqJruX4tzAkKBJXJVdUbbJmtrwtrUfuoGm2Ru5S3
+AcrEGQyPld3jzbFTH+oP+is3d+XVuev2wI1zN9w8rZM1I3dFf203xxKvuUyT
+TevJkd8JSzF7iVHBzJa+D0vFZJLapawNh6xiQ91ixaf03R+lDHvaMqwPCKl8
++lRGgkZF3W3Q0oGKmoq685yKmoo6L5jZ0vdhqZhMUruUteEQFfUk37VU98C8
+qRvq+uPjQz8UPZ/P+snoZYIqVAwtaFY0r+E0+8l8VIM3Gs70JkelUoLR0XBm
+2X5dldcmWS5lQ2r1jDue+DBaRvrzvidVpc2WOKJicRvVZu+HaFqjgpngC/MS
+Fek2rRvSjKCy9rnxfepWFFKokVMzWaEsU9GDbEYnbfuoYOpGkdcwql/Sv+fc
+CVdJcY1a+Yo3WuUaZsfE+9S+j3mTRuFZoAxL9eTtFK6ecccTH0bnlmGkMtXz
+dKnMLCTpifZTUUfnyNOR4QGrstQuHTXGFqSiXiV3wlVSXKNWvuKNVrmG2TGh
+ooZb0+T0rUWf/br9e1HvuWjR/z1/+JOUIujKPxYu+l9YCEX0kGVARDxjjHxa
+ygZv6ejF6KiE0cfp0eUk6JMrmVamQx1qkPTIRzNSo4LC0OnbV7S/tD7WRw32
+ElFYP1/y7EkZn09lPhHedej7vDiHSkbzq79YsWcWfUUUzYgXf7mdqa04eiK0
+ebYxe86d9yE+T3n+OzuVqHbMx01Up/kkCud7Q0ZJ5uvCRQhNGvVCoueayK9O
+mKP8qDDd9szol7b5AM5LSup0P7LvxXBX8dWGvlCGTTJm1IBwianK3QySyo2k
+clR/KtShBkmPfDQjNSpIRS0xexJRy8NjS0UtMfVBcmegoh6FijrkEarKPVfU
+Gd89w+rwd/Tt34uq/kuT6C2xsG5WhXvLsu+KUb+8/kxsvQMryUIxdp8PLc/c
+FiblXaJEcgvKuODFf54N8yYXwYejZ2fUbO8i5b7kXwRSPfJtFu1JWZ7BtlZu
+eRg9XXJEbcuriorIU2xkjYjQi2hJFjXeFvFmhjeNUWu9HhO3/LQoe8tdSKqC
+ys+f+tE5aZVoBSU0T87U+sr2emq4Ur7k9eQrhydiaqiF3LqSX4QFfacMk684
+yaT7l2GkUr7iJJOoqKMrUlGPritxZ9RyT9aIUFHn133e3IVQUQvVUlHPhor6
+1r6r/k9G9X1A/47+dDrZ/9+lb9++vbr8+PHDe7X7w077rafHU+JNTo1GF/Wu
+U52hhtCjqGEZJVGdoZsp5ZmZoRe2kc3Fd0tnKGKvJQ9UKr8pRh15dY0MZTOO
+e/pTa43OSUmFpn5Pbzzv7agveTNCJRnZ70FCX4OU5ZWn9KfiELrpLZ3aIZn0
+RYmGN+NRPsIpd7y19pa7qIhQZ15coicVmamMLjpb1SLmLUgmzlOtzau6RRAm
+bYxFTJoh9Vy+U4aNKonqDN1MKc/MDL2wjXydWIaRylElz5LKVExSS2Scigqm
+HHl1jQxlM457+lNrjc5JSYWmUlF7jqQ2RmqHZNIXJRrejEf5CKfc8dbaW+6i
+IkKdeXGJnlRkpjK66GxVi5i3IJk4T7U2r+oWQZi0MRYxaYbUZnyPLvH/lte2
+FP/69esnAAAAAAAAAAAAwM74B4thROM=
+   "], {{0, 0}, {1800, 25}}, {0, 255},
+   ColorFunction->RGBColor],
+  ImageSize->{1800, 25},
+  PlotRange->{{0, 1800}, {0, 25}}]], "Section",
+ CellFrame->{{0, 0}, {0, 0}},
+ ShowCellBracket->False],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"allanVar", "[", 
+   RowBox[{"ylist_", ",", "n_"}], "]"}], ":=", 
+  RowBox[{
+   FractionBox["1", "2"], 
+   RowBox[{"Mean", "[", 
+    SuperscriptBox[
+     RowBox[{"(", 
+      RowBox[{"ListCorrelate", "[", 
+       RowBox[{
+        RowBox[{"Append", "[", 
+         RowBox[{
+          RowBox[{"PadRight", "[", 
+           RowBox[{
+            RowBox[{"{", 
+             RowBox[{"-", "1"}], "}"}], ",", "n"}], "]"}], ",", "1"}], "]"}], 
+        ",", 
+        RowBox[{"MovingAverage", "[", 
+         RowBox[{"ylist", ",", "n"}], "]"}]}], "]"}], ")"}], "2"], "]"}], 
+   " "}]}]], "Input",
+ InitializationCell->True,
+ CellID->76309134],
+
+Cell[BoxData[
+ RowBox[{"Manipulate", "[", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"Module", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+      "Ntot", ",", "opts", ",", "ylist", ",", "g1", ",", "g2", ",", "Npts", 
+       ",", "\[Tau]data", ",", "\[Sigma]data", ",", "\[Sigma]\[Tau]data"}], 
+      "}"}], ",", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"Ntot", "=", "5000"}], ";", "\[IndentingNewLine]", 
+      RowBox[{"opts", "=", 
+       RowBox[{"Sequence", "[", 
+        RowBox[{
+         RowBox[{"Frame", "\[Rule]", "True"}], ",", 
+         RowBox[{"Axes", "\[Rule]", "False"}], ",", 
+         RowBox[{"Joined", "\[Rule]", "True"}], ",", 
+         RowBox[{"GridLines", "\[Rule]", "Automatic"}], ",", 
+         RowBox[{"BaseStyle", "\[Rule]", "12"}], ",", 
+         RowBox[{"ImageSize", "\[Rule]", "480"}]}], "]"}]}], ";", 
+      "\[IndentingNewLine]", 
+      RowBox[{"ylist", "=", 
+       RowBox[{
+        RowBox[{"RandomReal", "[", 
+         RowBox[{
+          RowBox[{"NormalDistribution", "[", 
+           RowBox[{"0", ",", "a"}], "]"}], ",", "Ntot"}], "]"}], "+", 
+        RowBox[{"b", " ", 
+         RowBox[{"Cos", "[", 
+          RowBox[{
+           FractionBox[
+            RowBox[{"2", " ", "\[Pi]", " "}], "T"], " ", 
+           RowBox[{"Range", "[", "Ntot", "]"}]}], "]"}]}], "+", 
+        RowBox[{"d", " ", 
+         RowBox[{"Range", "[", "Ntot", "]"}]}]}]}], ";", 
+      "\[IndentingNewLine]", 
+      RowBox[{"g1", "=", 
+       RowBox[{"ListPlot", "[", 
+        RowBox[{"ylist", ",", 
+         RowBox[{"FrameLabel", "\[Rule]", 
+          RowBox[{"{", 
+           RowBox[{"\"\<t [s]\>\"", ",", "\"\<y(t)\>\""}], "}"}]}], ",", 
+         RowBox[{"PlotRange", "\[Rule]", 
+          RowBox[{"{", 
+           RowBox[{"All", ",", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"-", "0.4"}], ",", "0.4"}], "}"}]}], "}"}]}], ",", 
+         RowBox[{"AspectRatio", "\[Rule]", "0.17"}], ",", "opts"}], "]"}]}], 
+      ";", "\[IndentingNewLine]", 
+      RowBox[{"Npts", "=", "30"}], ";", "\[IndentingNewLine]", 
+      RowBox[{"\[Tau]data", "=", 
+       RowBox[{"Union", "[", " ", 
+        RowBox[{"Table", "[", 
+         RowBox[{
+          RowBox[{"Round", "[", 
+           SuperscriptBox["10", 
+            RowBox[{
+             RowBox[{"(", 
+              RowBox[{"i", "-", "1"}], ")"}], 
+             FractionBox[
+              RowBox[{"Log", "[", 
+               RowBox[{"10", ",", "1000"}], "]"}], "Npts"]}]], "]"}], ",", 
+          RowBox[{"{", 
+           RowBox[{"i", ",", "1", ",", 
+            RowBox[{"Npts", "+", "1"}]}], "}"}]}], "]"}], "]"}]}], ";", 
+      "\[IndentingNewLine]", 
+      RowBox[{"\[Sigma]data", "=", 
+       RowBox[{
+        RowBox[{
+         SqrtBox[
+          RowBox[{"allanVar", "[", 
+           RowBox[{"ylist", ",", "#"}], "]"}]], "&"}], " ", "/@", " ", 
+        "\[Tau]data"}]}], ";", "\[IndentingNewLine]", 
+      RowBox[{"\[Sigma]\[Tau]data", "=", 
+       RowBox[{"Transpose", "[", 
+        RowBox[{"{", 
+         RowBox[{"\[Tau]data", ",", "\[Sigma]data"}], "}"}], "]"}]}], ";", 
+      "\[IndentingNewLine]", 
+      RowBox[{"g2", "=", 
+       RowBox[{"Show", "[", "\[IndentingNewLine]", 
+        RowBox[{
+         RowBox[{"ListLogLogPlot", "[", 
+          RowBox[{"\[Sigma]\[Tau]data", ",", 
+           RowBox[{"PlotMarkers", "\[Rule]", "Automatic"}], ",", 
+           RowBox[{"FrameLabel", "\[Rule]", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<\[Tau] [s]\>\"", ",", 
+              "\"\<\!\(\*SubscriptBox[\(\[Sigma]\), \(y\)]\)(\[Tau])\>\""}], 
+             "}"}]}], ",", 
+           RowBox[{"PlotRange", "\[Rule]", 
+            RowBox[{"{", 
+             RowBox[{"All", ",", 
+              RowBox[{"{", 
+               RowBox[{"0.00009", ",", "0.2"}], "}"}]}], "}"}]}], ",", 
+           RowBox[{"AspectRatio", "\[Rule]", "0.48"}], ",", "opts", ",", 
+           RowBox[{"FrameTicks", "\[Rule]", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"{", 
+               RowBox[{"1", ",", "10", ",", "100", ",", "1000"}], "}"}], ",", 
+              
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{"{", 
+                 RowBox[{
+                  SuperscriptBox["10", 
+                   RowBox[{"-", "4"}]], ",", 
+                  "\"\<\!\(\*SuperscriptBox[\(10\), \(-4\)]\)\>\""}], "}"}], 
+                ",", 
+                RowBox[{"{", 
+                 RowBox[{
+                  SuperscriptBox["10", 
+                   RowBox[{"-", "3"}]], ",", 
+                  "\"\<\!\(\*SuperscriptBox[\(10\), \(-3\)]\)\>\""}], "}"}], 
+                ",", 
+                RowBox[{"{", 
+                 RowBox[{
+                  SuperscriptBox["10", 
+                   RowBox[{"-", "2"}]], ",", 
+                  "\"\<\!\(\*SuperscriptBox[\(10\), \(-2\)]\)\>\""}], "}"}], 
+                ",", 
+                RowBox[{"{", 
+                 RowBox[{
+                  SuperscriptBox["10", 
+                   RowBox[{"-", "1"}]], ",", 
+                  "\"\<\!\(\*SuperscriptBox[\(10\), \(-1\)]\)\>\""}], "}"}]}],
+                "}"}], ",", "None", ",", "None"}], "}"}]}]}], "]"}], ",", 
+         "\[IndentingNewLine]", 
+         RowBox[{"LogLogPlot", "[", 
+          RowBox[{
+           RowBox[{"b", " ", 
+            RowBox[{
+             RowBox[{
+              RowBox[{"Sin", "[", 
+               RowBox[{"\[Pi]", " ", 
+                RowBox[{"\[Tau]", " ", "/", "T"}]}], "]"}], "^", "2"}], "/", 
+             " ", 
+             RowBox[{"(", 
+              RowBox[{"\[Pi]", " ", 
+               RowBox[{"\[Tau]", "/", "T"}]}], ")"}]}]}], ",", 
+           RowBox[{"{", 
+            RowBox[{"\[Tau]", ",", "1", ",", "1000"}], "}"}], ",", 
+           RowBox[{"PlotStyle", "\[Rule]", 
+            RowBox[{"Directive", "[", 
+             RowBox[{"{", 
+              RowBox[{"Thick", ",", "Dashed", ",", 
+               RowBox[{"RGBColor", "[", 
+                RowBox[{".49", ",", "0", ",", "0"}], "]"}]}], "}"}], 
+             "]"}]}]}], "]"}], ",", "\[IndentingNewLine]", 
+         RowBox[{"LogLogPlot", "[", 
+          RowBox[{
+           RowBox[{"d", " ", 
+            RowBox[{"\[Tau]", "/", 
+             SqrtBox["2"]}]}], ",", 
+           RowBox[{"{", 
+            RowBox[{"\[Tau]", ",", "1", ",", "1000"}], "}"}], ",", 
+           RowBox[{"PlotStyle", "\[Rule]", 
+            RowBox[{"Directive", "[", 
+             RowBox[{"{", 
+              RowBox[{"Thick", ",", "Dashed", ",", 
+               RowBox[{"Darker", "@", 
+                RowBox[{"RGBColor", "[", 
+                 RowBox[{".6", ",", ".73", ",", ".36"}], "]"}]}]}], "}"}], 
+             "]"}]}]}], "]"}]}], "\[IndentingNewLine]", "]"}]}], ";", 
+      "\[IndentingNewLine]", 
+      RowBox[{"Column", "[", 
+       RowBox[{"{", 
+        RowBox[{"g1", ",", "g2"}], "}"}], "]"}]}]}], "\[IndentingNewLine]", 
+    "]"}], ",", "\[IndentingNewLine]", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+      "a", ",", "0.05", ",", "\"\<white frequency noise amplitude\>\""}], 
+      "}"}], ",", "0.01", ",", "0.1", ",", 
+     RowBox[{"Appearance", "\[Rule]", "\"\<Labeled\>\""}]}], "}"}], ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"b", ",", "0.012", ",", "\"\<oscillation amplitude\>\""}], 
+      "}"}], ",", "0", ",", "0.1", ",", 
+     RowBox[{"Appearance", "\[Rule]", "\"\<Labeled\>\""}]}], "}"}], ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"T", ",", "100", ",", "\"\<oscillation period (s)\>\""}], "}"}],
+      ",", "10", ",", "1000", ",", 
+     RowBox[{"Appearance", "\[Rule]", "\"\<Labeled\>\""}]}], "}"}], ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"d", ",", "0.000005", ",", "\"\<drift (1/s)\>\""}], "}"}], ",", 
+     "0", ",", "0.0001", ",", 
+     RowBox[{"Appearance", "\[Rule]", "\"\<Labeled\>\""}]}], "}"}], ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{"SaveDefinitions", "\[Rule]", "True"}], ",", 
+   RowBox[{"TrackedSymbols", "\[RuleDelayed]", 
+    RowBox[{"{", 
+     RowBox[{"a", ",", "b", ",", "T", ",", "d"}], "}"}]}]}], 
+  "\[IndentingNewLine]", "]"}]], "Input",
+ CellChangeTimes->{
+  3.35696210375764*^9, 3.48291093028125*^9, {3.482911056484375*^9, 
+   3.482911136453125*^9}, {3.504590137492214*^9, 3.504590144573551*^9}, {
+   3.504876532249604*^9, 3.504876596967193*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`a$$ = 0.05, $CellContext`b$$ = 
+    0.012, $CellContext`d$$ = 5.*^-6, $CellContext`T$$ = 100, Typeset`show$$ =
+     True, Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+    Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+    "\"untitled\"", Typeset`specs$$ = {{{
+       Hold[$CellContext`a$$], 0.05, "white frequency noise amplitude"}, 0.01,
+       0.1}, {{
+       Hold[$CellContext`b$$], 0.012, "oscillation amplitude"}, 0, 0.1}, {{
+       Hold[$CellContext`T$$], 100, "oscillation period (s)"}, 10, 1000}, {{
+       Hold[$CellContext`d$$], 5.*^-6, "drift (1/s)"}, 0, 0.0001}}, 
+    Typeset`size$$ = {528., {193.125, 198.875}}, Typeset`update$$ = 0, 
+    Typeset`initDone$$, Typeset`skipInitDone$$ = 
+    False, $CellContext`a$12244$$ = 0, $CellContext`b$12245$$ = 
+    0, $CellContext`T$12246$$ = 0, $CellContext`d$12247$$ = 0}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, 
+      "Variables" :> {$CellContext`a$$ = 0.05, $CellContext`b$$ = 
+        0.012, $CellContext`d$$ = 5.*^-6, $CellContext`T$$ = 100}, 
+      "ControllerVariables" :> {
+        Hold[$CellContext`a$$, $CellContext`a$12244$$, 0], 
+        Hold[$CellContext`b$$, $CellContext`b$12245$$, 0], 
+        Hold[$CellContext`T$$, $CellContext`T$12246$$, 0], 
+        Hold[$CellContext`d$$, $CellContext`d$12247$$, 0]}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, "Body" :> 
+      Module[{$CellContext`Ntot$, $CellContext`opts$, $CellContext`ylist$, \
+$CellContext`g1$, $CellContext`g2$, $CellContext`Npts$, \
+$CellContext`\[Tau]data$, $CellContext`\[Sigma]data$, $CellContext`\[Sigma]\
+\[Tau]data$}, $CellContext`Ntot$ = 5000; $CellContext`opts$ = 
+         Sequence[
+          Frame -> True, Axes -> False, Joined -> True, GridLines -> 
+           Automatic, BaseStyle -> 12, ImageSize -> 480]; $CellContext`ylist$ = 
+         RandomReal[
+            NormalDistribution[
+            0, $CellContext`a$$], $CellContext`Ntot$] + $CellContext`b$$ 
+           Cos[(2 (Pi/$CellContext`T$$)) 
+             Range[$CellContext`Ntot$]] + $CellContext`d$$ 
+           Range[$CellContext`Ntot$]; $CellContext`g1$ = 
+         ListPlot[$CellContext`ylist$, FrameLabel -> {"t [s]", "y(t)"}, 
+           PlotRange -> {All, {-0.4, 0.4}}, AspectRatio -> 
+           0.17, $CellContext`opts$]; $CellContext`Npts$ = 
+         30; $CellContext`\[Tau]data$ = Union[
+           Table[
+            Round[
+            10^(($CellContext`i - 1) (
+               Log[10, 1000]/$CellContext`Npts$))], {$CellContext`i, 
+             1, $CellContext`Npts$ + 1}]]; $CellContext`\[Sigma]data$ = 
+         Map[$CellContext`allanVar[$CellContext`ylist$, #]^
+           Rational[
+            1, 2]& , $CellContext`\[Tau]data$]; \
+$CellContext`\[Sigma]\[Tau]data$ = 
+         Transpose[{$CellContext`\[Tau]data$, $CellContext`\[Sigma]data$}]; \
+$CellContext`g2$ = Show[
+           
+           ListLogLogPlot[$CellContext`\[Sigma]\[Tau]data$, PlotMarkers -> 
+            Automatic, 
+            FrameLabel -> {
+             "\[Tau] [s]", 
+              "\!\(\*SubscriptBox[\(\[Sigma]\), \(y\)]\)(\[Tau])"}, 
+            PlotRange -> {All, {0.00009, 0.2}}, AspectRatio -> 
+            0.48, $CellContext`opts$, 
+            FrameTicks -> {{1, 10, 100, 
+              1000}, {{10^(-4), "\!\(\*SuperscriptBox[\(10\), \(-4\)]\)"}, {
+               10^(-3), "\!\(\*SuperscriptBox[\(10\), \(-3\)]\)"}, {
+               10^(-2), "\!\(\*SuperscriptBox[\(10\), \(-2\)]\)"}, {
+               10^(-1), "\!\(\*SuperscriptBox[\(10\), \(-1\)]\)"}}, None, 
+              None}], 
+           
+           LogLogPlot[$CellContext`b$$ (
+             Sin[Pi ($CellContext`\[Tau]/$CellContext`T$$)]^2/(
+             Pi ($CellContext`\[Tau]/$CellContext`T$$))), \
+{$CellContext`\[Tau], 1, 1000}, PlotStyle -> Directive[{Thick, Dashed, 
+               RGBColor[0.49, 0, 0]}]], 
+           
+           LogLogPlot[$CellContext`d$$ ($CellContext`\[Tau]/2^
+             Rational[1, 2]), {$CellContext`\[Tau], 1, 1000}, PlotStyle -> 
+            Directive[{Thick, Dashed, 
+               Darker[
+                RGBColor[0.6, 0.73, 0.36]]}]]]; 
+        Column[{$CellContext`g1$, $CellContext`g2$}]], 
+      "Specifications" :> {{{$CellContext`a$$, 0.05, 
+          "white frequency noise amplitude"}, 0.01, 0.1, Appearance -> 
+         "Labeled"}, {{$CellContext`b$$, 0.012, "oscillation amplitude"}, 0, 
+         0.1, Appearance -> 
+         "Labeled"}, {{$CellContext`T$$, 100, "oscillation period (s)"}, 10, 
+         1000, Appearance -> 
+         "Labeled"}, {{$CellContext`d$$, 5.*^-6, "drift (1/s)"}, 0, 0.0001, 
+         Appearance -> "Labeled"}}, 
+      "Options" :> {
+       TrackedSymbols :> {$CellContext`a$$, $CellContext`b$$, \
+$CellContext`T$$, $CellContext`d$$}}, 
+      "DefaultOptions" :> {ControllerLinking -> True}],
+     ImageSizeCache->{573., {279., 284.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    Initialization:>(({
+       Attributes[PlotRange] = {ReadProtected}, $CellContext`allanVar[
+          Pattern[$CellContext`ylist, 
+           Blank[]], 
+          Pattern[$CellContext`n, 
+           Blank[]]] := (1/2) Mean[ListCorrelate[
+             Append[
+              PadRight[{-1}, $CellContext`n], 1], 
+             MovingAverage[$CellContext`ylist, $CellContext`n]]^2]}; 
+      Typeset`initDone$$ = True); ReleaseHold[
+       HoldComplete[{$CellContext`allanVar[
+           Pattern[$CellContext`ylist, 
+            Blank[]], 
+           Pattern[$CellContext`n, 
+            Blank[]]] := (1/2) Mean[ListCorrelate[
+              Append[
+               PadRight[{-1}, $CellContext`n], 1], 
+              MovingAverage[$CellContext`ylist, $CellContext`n]]^2]}]]; 
+     Typeset`initDone$$ = True),
+    SynchronousInitialization->True,
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellID->972810141],
+
+Cell[CellGroupData[{
+
+Cell["CAPTION", "Section",
+ CellFrame->{{0, 0}, {1, 0}},
+ CellFrameColor->RGBColor[0.87, 0.87, 0.87],
+ FontFamily->"Helvetica",
+ FontSize->12,
+ FontWeight->"Bold",
+ FontColor->RGBColor[0.597406, 0, 0.0527047]],
+
+Cell[TextData[{
+ "The Allan deviation ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["\[Sigma]", "y"], "(", "\[Tau]", ")"}], TraditionalForm]], 
+  "InlineMath"],
+ " is a statistical measure of the relative frequency instability of an \
+oscillator on a sampling period ",
+ Cell[BoxData[
+  FormBox["\[Tau]", TraditionalForm]], "InlineMath"],
+ " . This Demonstration simulates an oscillator having white frequency noise \
+plus deterministic perturbations. The upper graph shows the time series of \
+relative frequency fluctuations ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"y", "(", "t", ")"}], "=", 
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"\[Nu]", "(", "t", ")"}], "-", 
+       SubscriptBox["\[Nu]", "0"]}], ")"}], "/", 
+     SubscriptBox["\[Nu]", "0"]}]}], TraditionalForm]], "InlineMath"],
+ " and the lower graph shows the corresponding Allan plot ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["\[Sigma]", "y"], "(", "\[Tau]", ")"}], TraditionalForm]], 
+  "InlineMath"],
+ ". You can modify the noise amplitude, add a drift or an oscillation, and \
+observe the resulting change in Allan deviation. Each of the three \
+perturbations contributes to the Allan deviation as follows: the white \
+frequency noise gives rise to",
+ " ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{
+     SubscriptBox["\[Sigma]", "y"], "(", "\[Tau]", ")"}], "\[Proportional]", 
+    SuperscriptBox["\[Tau]", 
+     RowBox[{
+      RowBox[{"-", "1"}], "/", "2"}]]}], TraditionalForm]], "InlineMath"],
+ ", the linear drift ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"y", "(", "t", ")"}], "=", 
+    RowBox[{"d", " ", "t"}]}], TraditionalForm]], "InlineMath"],
+ " adds a contribution ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{
+     SubscriptBox["\[Sigma]", "y"], "(", "\[Tau]", ")"}], "=", 
+    RowBox[{
+     SuperscriptBox["2", 
+      RowBox[{
+       RowBox[{"-", "1"}], "/", "2"}]], "d", " ", "\[Tau]"}]}], 
+   TraditionalForm]], "InlineMath"],
+ " (green curve), and the oscillation ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"y", "(", "t", ")"}], "=", 
+    RowBox[{"b", " ", 
+     RowBox[{"cos", "(", 
+      RowBox[{"2", "\[Pi]", " ", 
+       RowBox[{"t", "/", "T"}]}], ")"}]}]}], TraditionalForm]], 
+  "InlineMath"],
+ " results in ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{
+     SubscriptBox["\[Sigma]", "y"], "(", "\[Tau]", ")"}], "=", 
+    RowBox[{"b", " ", 
+     RowBox[{
+      SuperscriptBox[
+       RowBox[{"sin", "(", 
+        RowBox[{"\[Pi]", " ", 
+         RowBox[{"\[Tau]", "/", "T"}]}], ")"}], "2"], "/", " ", 
+      RowBox[{"(", 
+       RowBox[{"\[Pi]", " ", 
+        RowBox[{"\[Tau]", "/", "T"}]}], ")"}]}]}]}], TraditionalForm]], 
+  "InlineMath"],
+ " (red curve). "
+}], "Text"]
+}, Close]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["DETAILS", "Section",
+ CellFrame->{{0, 0}, {1, 0}},
+ CellFrameColor->RGBColor[0.87, 0.87, 0.87],
+ FontFamily->"Helvetica",
+ FontSize->12,
+ FontWeight->"Bold",
+ FontColor->RGBColor[0.597406, 0, 0.0527047]],
+
+Cell["Snapshot 1: oscillator with white frequency noise", "Text"],
+
+Cell["\<\
+Snapshot 2: oscillator with white frequency noise plus a deterministic \
+oscillation\
+\>", "Text"],
+
+Cell["\<\
+Snapshot 3: oscillator with white frequency noise plus a linear drift\
+\>", "Text"],
+
+Cell[TextData[{
+ "The Allan deviation ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["\[Sigma]", "y"], "(", "\[Tau]", ")"}], TraditionalForm]], 
+  "InlineMath"],
+ " is the square root of the Allan variance defined by:"
+}], "Text"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{
+     SubsuperscriptBox["\[Sigma]", "y", "2"], "(", "\[Tau]", ")"}], "=", 
+    RowBox[{
+     FractionBox["1", "2"], 
+     RowBox[{"\[LeftAngleBracket]", " ", 
+      SuperscriptBox[
+       RowBox[{"(", 
+        RowBox[{
+         SubsuperscriptBox[
+          OverscriptBox["y", "_"], 
+          RowBox[{"n", "+", "1"}], "\[Tau]"], "-", 
+         SubsuperscriptBox[
+          OverscriptBox["y", "_"], "n", "\[Tau]"]}], ")"}], "2"], 
+      "\[RightAngleBracket]"}]}]}], TraditionalForm]], "InlineMath"],
+ ","
+}], "Text"],
+
+Cell[TextData[{
+ "where ",
+ Cell[BoxData[
+  FormBox[
+   SubsuperscriptBox[
+    OverscriptBox["y", "_"], "n", "\[Tau]"], TraditionalForm]], 
+  "InlineMath"],
+ " is the ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["n", "th"], TraditionalForm]], "InlineMath"],
+ " relative frequency fluctuations average over the integration time ",
+ Cell[BoxData[
+  FormBox["\[Tau]", TraditionalForm]], "InlineMath"],
+ ". "
+}], "Text"],
+
+Cell["References", "Text"],
+
+Cell[TextData[{
+ "[1] C. Audoin and B. Guinot, ",
+ StyleBox["The Measurement of Time",
+  FontSlant->"Italic"],
+ ", Cambridge: Cambridge University Press, 2001."
+}], "Text"],
+
+Cell[TextData[{
+ "[2] J. Vanier and C. Audoin, ",
+ StyleBox["The Quantum Physics of Atomic Frequency Standards",
+  FontSlant->"Italic"],
+ ", Philadelphia: Hilger, 1989."
+}], "Text"]
+}, Close]],
+
+Cell[CellGroupData[{
+
+Cell["THIS NOTEBOOK IS THE SOURCE CODE FROM", "Text",
+ CellFrame->{{0, 0}, {0, 0}},
+ CellMargins->{{48, 10}, {4, 28}},
+ CellGroupingRules->{"SectionGrouping", 25},
+ CellFrameMargins->{{48, 48}, {6, 5}},
+ CellFrameColor->RGBColor[0.87, 0.87, 0.87],
+ FontFamily->"Helvetica",
+ FontSize->10,
+ FontWeight->"Bold",
+ FontColor->RGBColor[0.597406, 0, 0.0527047]],
+
+Cell[TextData[{
+ "\"",
+ ButtonBox["Allan Plot of an Oscillator with Deterministic Perturbations",
+  BaseStyle->"Hyperlink",
+  ButtonData->{
+    URL["http://demonstrations.wolfram.com/\
+AllanPlotOfAnOscillatorWithDeterministicPerturbations/"], None},
+  ButtonNote->
+   "http://demonstrations.wolfram.com/\
+AllanPlotOfAnOscillatorWithDeterministicPerturbations/"],
+ "\"",
+ " from ",
+ ButtonBox["the Wolfram Demonstrations Project",
+  BaseStyle->"Hyperlink",
+  ButtonData->{
+    URL["http://demonstrations.wolfram.com/"], None},
+  ButtonNote->"http://demonstrations.wolfram.com/"],
+ "\[ParagraphSeparator]\[NonBreakingSpace]",
+ ButtonBox["http://demonstrations.wolfram.com/\
+AllanPlotOfAnOscillatorWithDeterministicPerturbations/",
+  BaseStyle->"Hyperlink",
+  ButtonData->{
+    URL["http://demonstrations.wolfram.com/\
+AllanPlotOfAnOscillatorWithDeterministicPerturbations/"], None},
+  ButtonNote->
+   "http://demonstrations.wolfram.com/\
+AllanPlotOfAnOscillatorWithDeterministicPerturbations/"]
+}], "Text",
+ CellMargins->{{48, Inherited}, {0, Inherited}},
+ FontFamily->"Verdana",
+ FontSize->10,
+ FontColor->GrayLevel[0.5]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "Contributed by: ",
+ ButtonBox["Gianni Di Domenico",
+  BaseStyle->"Hyperlink",
+  ButtonData->{
+    URL["http://demonstrations.wolfram.com/author.html?author=Gianni+Di+\
+Domenico"], None},
+  ButtonNote->
+   "http://demonstrations.wolfram.com/author.html?author=Gianni+Di+Domenico"]
+}], "Text",
+ CellDingbat->"\[FilledSmallSquare]",
+ CellMargins->{{66, 48}, {2, 4}},
+ FontFamily->"Verdana",
+ FontSize->10,
+ FontColor->GrayLevel[0.6]],
+
+Cell["(Universit\[EAcute] de Neuch\[AHat]tel)", "Text",
+ CellDingbat->"\[FilledSmallSquare]",
+ CellMargins->{{66, 48}, {2, 4}},
+ FontFamily->"Verdana",
+ FontSize->10,
+ FontColor->GrayLevel[0.6],
+ CellID->340871945]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "A full-function Wolfram ",
+ StyleBox["Mathematica",
+  FontSlant->"Italic"],
+ " system (Version 6 or higher) is required to edit this notebook.\n",
+ StyleBox[ButtonBox["GET WOLFRAM MATHEMATICA \[RightGuillemet]",
+  BaseStyle->"Hyperlink",
+  ButtonData->{
+    URL["http://www.wolfram.com/products/mathematica/"], None},
+  ButtonNote->"http://www.wolfram.com/products/mathematica/"],
+  FontFamily->"Helvetica",
+  FontWeight->"Bold",
+  FontSlant->"Italic",
+  FontColor->RGBColor[1, 0.42, 0]]
+}], "Text",
+ CellFrame->True,
+ CellMargins->{{48, 68}, {8, 28}},
+ CellFrameMargins->12,
+ CellFrameColor->RGBColor[0.87, 0.87, 0.87],
+ CellChangeTimes->{3.3750111182355957`*^9},
+ ParagraphSpacing->{1., 1.},
+ FontFamily->"Verdana",
+ FontSize->10,
+ FontColor->GrayLevel[0.411765],
+ Background->RGBColor[1, 1, 1]],
+
+Cell[TextData[{
+ "\[Copyright] ",
+ StyleBox[ButtonBox["Wolfram Demonstrations Project & Contributors",
+  BaseStyle->"Hyperlink",
+  ButtonData->{
+    URL["http://demonstrations.wolfram.com/"], None},
+  ButtonNote->"http://demonstrations.wolfram.com/"],
+  FontColor->GrayLevel[0.6]],
+ "\[ThickSpace]\[ThickSpace]\[ThickSpace]|\[ThickSpace]\[ThickSpace]\
+\[ThickSpace]",
+ StyleBox[ButtonBox["Terms of Use",
+  BaseStyle->"Hyperlink",
+  ButtonData->{
+    URL["http://demonstrations.wolfram.com/termsofuse.html"], None},
+  ButtonNote->"http://demonstrations.wolfram.com/termsofuse.html"],
+  FontColor->GrayLevel[0.6]],
+ "\[ThickSpace]\[ThickSpace]\[ThickSpace]|\[ThickSpace]\[ThickSpace]\
+\[ThickSpace]",
+ StyleBox[ButtonBox["Make a new version of this Demonstration \
+\[RightGuillemet]",
+  BaseStyle->"Hyperlink",
+  ButtonData->{
+    URL["http://demonstrations.wolfram.com/participate/upload.jsp?id=\
+AllanPlotOfAnOscillatorWithDeterministicPerturbations"], None},
+  ButtonNote->None],
+  FontColor->GrayLevel[0.6]]
+}], "Text",
+ CellFrame->{{0, 0}, {0, 0.5}},
+ CellMargins->{{48, 10}, {20, 50}},
+ CellFrameMargins->{{6, 0}, {6, 6}},
+ CellFrameColor->GrayLevel[0.6],
+ FontFamily->"Verdana",
+ FontSize->9,
+ FontColor->GrayLevel[0.6]]
+}, Open  ]]
+}, Open  ]]
+},
+Editable->True,
+Saveable->False,
+ScreenStyleEnvironment->"Working",
+CellInsertionPointCell->None,
+WindowSize->{710, 650},
+WindowMargins->{{Inherited, Inherited}, {Inherited, 0}},
+WindowElements->{
+ "StatusArea", "MemoryMonitor", "MagnificationPopUp", "VerticalScrollBar", 
+  "MenuBar"},
+WindowTitle->"Allan Plot of an Oscillator with Deterministic Perturbations - \
+Source",
+DockedCells->{},
+CellContext->Notebook,
+FrontEndVersion->"8.0 for Microsoft Windows (32-bit) (November 7, 2010)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[664, 24, 180, 3, 70, "Section"],
+Cell[847, 29, 3700, 64, 70, "Section"],
+Cell[4550, 95, 661, 22, 70, "Input",
+ InitializationCell->True,
+ CellID->76309134],
+Cell[5214, 119, 8390, 209, 70, "Input"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[13641, 333, 6275, 127, 70, "Output",
+ CellID->972810141],
+Cell[CellGroupData[{
+Cell[19941, 464, 209, 6, 70, "Section"],
+Cell[20153, 472, 2765, 87, 70, "Text"]
+}, Close]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[22966, 565, 209, 6, 70, "Section"],
+Cell[23178, 573, 65, 0, 70, "Text"],
+Cell[23246, 575, 108, 3, 70, "Text"],
+Cell[23357, 580, 93, 2, 70, "Text"],
+Cell[23453, 584, 241, 8, 70, "Text"],
+Cell[23697, 594, 582, 19, 70, "Text"],
+Cell[24282, 615, 418, 15, 70, "Text"],
+Cell[24703, 632, 26, 0, 70, "Text"],
+Cell[24732, 634, 172, 5, 70, "Text"],
+Cell[24907, 641, 181, 5, 70, "Text"]
+}, Close]],
+Cell[CellGroupData[{
+Cell[25124, 651, 355, 9, 70, "Text",
+ CellGroupingRules->{"SectionGrouping", 25}],
+Cell[25482, 662, 1120, 31, 70, "Text"],
+Cell[CellGroupData[{
+Cell[26627, 697, 448, 14, 70, "Text"],
+Cell[27078, 713, 214, 6, 70, "Text",
+ CellID->340871945]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[27329, 724, 815, 24, 70, "Text"],
+Cell[28147, 750, 1225, 33, 70, "Text"]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
+(* NotebookSignature DTjUlYEIvR@trAToB2hby4g1 *)
